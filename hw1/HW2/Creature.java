@@ -61,7 +61,7 @@ public abstract class Creature implements Fightable{
     public void action() {
 //        this.attack();
         Random rnd = new Random();
-        if (Math.random() <= 0.1) {
+        if (Math.random() <= 0.2) {
            this.superPower();
        } else {
            this.attack();

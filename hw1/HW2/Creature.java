@@ -34,9 +34,6 @@ public abstract class Creature implements Fightable{
     }
 
     public void attack() {
-        if (Math.abs(this.getPosition()-enemy.getPosition())>this.attackRange) {
-            this.move();
-        } else {
             this.setAttackForce();
             System.out.print(this.name + " attacks. ");
             if(this.getAttackForce()-enemy.defence<=0) {
@@ -51,21 +48,22 @@ public abstract class Creature implements Fightable{
                     System.out.println(enemy.name + "'s health is " + enemy.health);
                 }
             }
-
-        }
     }
 
     public void die() {
         System.out.println(this.name + " is dead :(");
     }
     public void action() {
-//        this.attack();
-        Random rnd = new Random();
-        if (Math.random() <= 0.2) {
-           this.superPower();
-       } else {
-           this.attack();
-       }
+        if (Math.abs(this.getPosition()-enemy.getPosition())>this.attackRange) {
+            this.move();
+        } else {
+            Random rnd = new Random();
+            if (Math.random() <= 0.2) {
+                this.superPower();
+            } else {
+                this.attack();
+            }
+        }
     }
 
     void move() {

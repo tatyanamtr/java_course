@@ -29,6 +29,12 @@ public abstract class Creature implements Fightable{
     public void setAttackForce() {
         this.attackForce = (int) ((Math.random() * (this.maxAttackForce-this.minAttackForce) ) + this.minAttackForce);
     }
+    public void setEnemy(Creature enemy) {
+        this.enemy = enemy;
+    }
+    public Creature getEnemy() {
+        return this.enemy;
+    }
 
     public Creature() {
     }

@@ -21,7 +21,6 @@ public class Main {
             } else {
                 manticore.action();
             }
-            Thread.sleep(1000);
 
 
         }

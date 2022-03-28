@@ -3,15 +3,15 @@ package HW2;
 import java.util.Random;
 
 public abstract class Creature implements Fightable{
-    String name;
-    int attackRange;
-    int defence;
-    int attackForce;
-    int minAttackForce;
-    int maxAttackForce;
-    int health;
-    int speed;
-    Creature enemy;
+    protected String name;
+    protected int attackRange;
+    protected int defence;
+    private int attackForce;
+    protected int minAttackForce;
+    protected int maxAttackForce;
+    protected int health;
+    protected int speed;
+    private Creature enemy;
     private int position;
 
     public int setPosition(int pos) {

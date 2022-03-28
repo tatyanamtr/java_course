@@ -57,7 +57,6 @@ public abstract class Creature implements Fightable{
         if (Math.abs(this.getPosition()-enemy.getPosition())>this.attackRange) {
             this.move();
         } else {
-            Random rnd = new Random();
             if (Math.random() <= 0.2) {
                 this.superPower();
             } else {

@@ -1,4 +1,4 @@
-package src;
+package HW1;
 
 import static java.lang.Integer.*;
 
